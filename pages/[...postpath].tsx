@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				featuredImage {
 					node {
 						sourceUrl
-						altText
+						
 					}
 				}
 			}
@@ -98,7 +98,7 @@ const Post: React.FC<PostProps> = (props) => {
 				<h1>{post.any}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
-					alt={post.featuredImage.node.altText || post.jinny}
+					alt={post.featuredImage.node.post}
 				/>
 				<article dangerouslySetInnerHTML={{ __html: post.content }} />
 			</div>
