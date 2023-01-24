@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			post(id: "/${path}/", idType: URI) {
 				id
 				excerpt
-				title
+				
 				link
 				dateGmt
 				modifiedGmt
@@ -94,15 +94,15 @@ const Post: React.FC<PostProps> = (props) => {
 				
 				<meta
 					property="og:image:alt"
-					content={post.featuredImage.node.altText || post.title}
+					content={post.featuredImage.node.altText || post.jinny}
 				/>
-				<title>{post.title}</title>
+				
 			</Head>
 			<div className="post-container">
 				<h1>{post.any}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
-					alt={post.featuredImage.node.altText || post.title}
+					alt={post.featuredImage.node.altText || post.jinny}
 				/>
 				<article dangerouslySetInnerHTML={{ __html: post.content }} />
 			</div>
