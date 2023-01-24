@@ -92,11 +92,7 @@ const Post: React.FC<PostProps> = (props) => {
 				<meta property="article:published_time" content={post.dateGmt} />
 				<meta property="article:modified_time" content={post.modifiedGmt} />
 				
-				<meta
-					property="og:image:alt"
-					content={post.featuredImage.node.altText || post.jinny}
-				/>
-				
+
 			</Head>
 			<div className="post-container">
 				<h1>{post.any}</h1>
