@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				link
 				dateGmt
 				modifiedGmt
-				content
+				
 				author {
 					node {
 						name
@@ -84,10 +84,10 @@ const Post: React.FC<PostProps> = (props) => {
 			<Head>
 
 				<link rel="canonical" href={`https://${host}/${path}`} />
-				<meta property="og:title"  />
-
+				<meta property="og:title"content='null'  />
+                
 				<meta property="og:url" content={`https://${host}/${path}`} />
-				<meta property="og:type" content="article" />
+				<meta property="og:type" content="featuredImage" />
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:site_name" content={host.split('.')[0]} />
 				<meta property="article:published_time" content={post.dateGmt} />
@@ -100,7 +100,7 @@ const Post: React.FC<PostProps> = (props) => {
 				<h1>{post.jinny}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
-					alt={post.featuredImage.node.post}
+					alt={post.featuredImage}
 				/>
 				<article dangerouslySetInnerHTML={{ __html: post.content }} />
 			</div>
