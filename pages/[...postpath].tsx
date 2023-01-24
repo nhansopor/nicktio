@@ -85,7 +85,7 @@ const Post: React.FC<PostProps> = (props) => {
 
 				<link rel="canonical" href={`https://${host}/${path}`} />
 				<meta property="og:title"  />
-                                <meta property="og:description"  />
+
 				<meta property="og:url" content={`https://${host}/${path}`} />
 				<meta property="og:type" content="article" />
 				<meta property="og:locale" content="en_US" />
