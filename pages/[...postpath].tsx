@@ -84,7 +84,7 @@ const Post: React.FC<PostProps> = (props) => {
 			<Head>
 
 				<link rel="canonical" href={`https://${host}/${path}`} />
-				<meta property="og:title"content='null'  />
+				
                 
 				<meta property="og:url" content={`https://${host}/${path}`} />
 				<meta property="og:type" content="featuredImage" />
