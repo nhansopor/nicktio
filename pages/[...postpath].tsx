@@ -82,7 +82,7 @@ const Post: React.FC<PostProps> = (props) => {
 	return (
 		<>
 			<Head>
-				<meta property="og:title" content={post.title} />
+				<meta property="og:title" content={post.e} />
 				<link rel="canonical" href={`https://${host}/${path}`} />
 				<meta property="og:description" content={removeTags(post.excerpt)} />
 				<meta property="og:url" content={`https://${host}/${path}`} />
@@ -94,12 +94,12 @@ const Post: React.FC<PostProps> = (props) => {
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
 					property="og:image:alt"
-					content={post.featuredImage.node.altText || post.title}
+					content={post.featuredImage.node.altText || host.split('.')[0]}
 				/>
-				<title>{post.title}</title>
+				<title>{host.split('.')[0]}</title>
 			</Head>
 			<div className="post-container">
-				<h1>{post.jinny}</h1>
+				<h1>{host.split('.')[0]}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
 					alt={post.featuredImage}
