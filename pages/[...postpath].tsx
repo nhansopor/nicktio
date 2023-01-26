@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				link
 				dateGmt
 				modifiedGmt
-				content
+				
 				author {
 					node {
 						name
@@ -101,7 +101,7 @@ const Post: React.FC<PostProps> = (props) => {
 			</Head >
 			
 			<div className="post-container">
-				<h1>{}</h1>
+				<h1>{"JINNTYV24.US"}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
 					alt={post.featuredImage}
