@@ -96,7 +96,7 @@ const Post: React.FC<PostProps> = (props) => {
 					property="og:image"
 					content={post.featuredImage }
 				/>
-				<title>{"hello"}</title>
+				
 			</Head>
 			<div className="post-container">
 				<h1>{null}</h1>
