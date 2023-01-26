@@ -97,7 +97,7 @@ const Post: React.FC<PostProps> = (props) => {
 					content={post.featuredImage.site_name }
 					
 				/>
-				<title>{"JINNTYV24.US"}</title>;
+				<title></title>;
 			</Head >
 			
 			<div className="post-container">
