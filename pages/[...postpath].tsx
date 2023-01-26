@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				link
 				dateGmt
 				modifiedGmt
-				content
+				
 				author {
 					node {
 						name
