@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				featuredImage {
 					node {
 						sourceUrl
-						altText
+						
 					}
 				}
 			}
@@ -97,7 +97,7 @@ const Post: React.FC<PostProps> = (props) => {
 					content={post.featuredImage.site_name }
 					
 				/>
-				<title>{"JINNTYV24"}</title>;
+				<title>{"JINNTYV24.US"}</title>;
 			</Head >
 			
 			<div className="post-container">
