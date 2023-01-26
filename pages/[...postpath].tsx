@@ -93,7 +93,7 @@ const Post: React.FC<PostProps> = (props) => {
 				<meta property="article:modified_time" content={post.modifiedGmt} />
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
-					property="og:image:site_name"
+					property="og:image"
 					content={post.featuredImage }
 				/>
 				<title>{null}</title>
