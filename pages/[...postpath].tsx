@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				featuredImage {
 					node {
 						sourceUrl
-						
+						altText
 					}
 				}
 			}
@@ -82,24 +82,24 @@ const Post: React.FC<PostProps> = (props) => {
 	return (
 		<>
 			<Head>
-				
+				<meta property="og:title" content={"jinnytv"} />
 				<link rel="canonical" href={`https://${host}/${path}`} />
-				
+				<meta property="og:description" content={removeTags(post.excerpt)} />
 				<meta property="og:url" content={`https://${host}/${path}`} />
 				<meta property="og:type" content="article" />
 				<meta property="og:locale" content="en_US" />
-				<meta property="og:site_name" content={ />
+				<meta property="og:site_name" content={"jinnytv"} />
 				<meta property="article:published_time" content={post.dateGmt} />
 				<meta property="article:modified_time" content={post.modifiedGmt} />
 				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
 				<meta
-					property="og:image:alt"
-					content={post.featuredImage }
+					property="og:image:site_name"
+					content={post.featuredImage.site_name }
 				/>
-				<title>{}</title>
+				<title>{null}</title>
 			</Head>
 			<div className="post-container">
-				<h1>{}</h1>
+				<h1>{null}</h1>
 				<img
 					src={post.featuredImage.node.sourceUrl}
 					alt={post.featuredImage}
