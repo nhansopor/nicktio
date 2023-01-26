@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 				featuredImage {
 					node {
 						sourceUrl
-						altText
+						
 					}
 				}
 			}
@@ -96,7 +96,7 @@ const Post: React.FC<PostProps> = (props) => {
 					property="og:image"
 					content={post.featuredImage }
 				/>
-				<title>{null}</title>
+				<title>{hello}</title>
 			</Head>
 			<div className="post-container">
 				<h1>{null}</h1>
